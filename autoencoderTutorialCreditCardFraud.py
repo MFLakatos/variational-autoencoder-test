@@ -108,6 +108,15 @@ plt.yscale('log')
 f.savefig('imgs/fraudNormal.png', bbox_inches='tight')
 f.savefig('imgs/fraudNormal.pdf', bbox_inches='tight')
 
+
+f, (ax1, ax2) = plt.subplots(2, 1, sharex=True)
+f.suptitle('Time of transaction vs Amount by class')
+ax1.scatter(frauds.Time, frauds.Amount)
+ax1.set_title('Fraud')
+ax2.scatter(normal.Time, normal.Amount)
+ax2.set_title('Normal')
+plt.xlabel('Time (in Seconds)')
+plt.ylabel('Amount')
 #-----------------------------------------------------------------------------------------------------------------------
 #------------- Divide data in train and test
 #-----------------------------------------------------------------------------------------------------------------------
