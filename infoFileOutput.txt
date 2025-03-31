@@ -7,3 +7,17 @@ Metrics: accuracy
 Callbacks:
  - ModelCheckpoint: model.h5, save_best_only=True
  - TensorBoard: log_dir='/media/old-tf-hackers-7/logs'
+Elementos importantes:
+Fraude clase 1
+Normal clase 0
+input dim: 29
+encoding dim: 14
+number epoch: 100
+batch size: 32
+optimizer: adam
+loss: ('mean_squared_error',)
+metric: accuracy
+MSE: [81.1781322   0.83622255  0.25752752 ...  0.49628868  0.19788917
+  1.61177525]
+threshold: 2.9
+El tiempo de ejecución fue de: 00:22:32
