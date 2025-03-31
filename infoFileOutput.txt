@@ -1,0 +1,9 @@
+Información del Autoencoder:
+Our Autoencoder uses 4 fully connected layers with 14, 7, 7 and 29 neurons respectively. The first two layers are used for our encoder, the last two go for the decoder. Additionally, L1 regularization will be used during training.
+Compilación del Autoencoder:
+Optimizer: adam
+Loss: mean_squared_error
+Metrics: accuracy
+Callbacks:
+ - ModelCheckpoint: model.h5, save_best_only=True
+ - TensorBoard: log_dir='/media/old-tf-hackers-7/logs'
